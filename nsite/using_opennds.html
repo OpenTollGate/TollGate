@@ -81,6 +81,56 @@
             color: var(--bitcoin-orange);
             font-weight: bold;
         }
+        .info-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(124, 58, 237, 0.1);
+        }
+
+        .challenges-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .challenges-list  li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .challenges-list li:before {
+            content: "•";
+            color: var(--bitcoin-orange);
+            position: absolute;
+            left: 0;
+        }
+    
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+    
+        .solution-card {
+            border: 1px solid var(--nostr-purple);
+            border-radius: 8px;
+            padding: 15px;
+        }
+    
+        .solution-card h3 {
+            color: var(--bitcoin-orange);
+            margin-top: 0;
+        }
+
+        .config-details {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
     </style>
 </head>
 <body>
@@ -88,6 +138,65 @@
         <h1>TollGate System Flow</h1>
         <p>OpenWRT plugin for Bitcoin-powered WiFi captive portal</p>
 
+        <!-- Add new Overview section -->
+        <div class="info-section">
+            <h2>OpenNDS Overview</h2>
+            <p>OpenNDS is the current captive portal solution used in TollGate, replacing the original nodogsplash implementation. It provides enhanced functionality and better integration capabilities with the TollGate ecosystem.</p>
+        </div>
+
+        <!-- Add Challenges section -->
+        <div class="info-section">
+            <h2>Current Challenges</h2>
+            <ul class="challenges-list">
+                <li>Performance issues on GLAR300m hardware</li>
+                <li>PHP dependencies causing slowdown</li>
+                <li>FAS (Forward Authentication Service) responsiveness</li>
+            </ul>
+        </div>
+
+        <!-- Add Solutions section -->
+        <div class="info-section">
+            <h2>Solution Approaches</h2>
+            <div class=" solutions-grid">
+                <div class="solution-card">
+                    <h3>Remote FAS Server</h3>
+                    <ul>
+                        <li>Move heavy lifting off router</li>
+                        <li>Configure OpenNDS without compilation</li>
+                        <li>Improve responsiveness</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <h3>Architecture Improvements</h3>
+                    <ul>
+                        <li>Use BTCPayServer for payment processing</li>
+                        <li>Dockerize FAS and payment infrastructure</li>
+                        <li>Keep OpenWRT lightweight</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Configuration section -->
+        <div class="info-section">
+            <h2>Current Configuration</h2>
+            <div class="config-details">
+                <ul>
+                    <li>PHP-based FAS on router</li>
+                    <li>Local authentication</ li>
+                    <li>E-cash string validation</li>
+                </ul>
+            </div>
+
+            <h3>Planned Improvements</h3>
+            <ul>
+                <li>Move to remote FAS</li>
+                <li>Use pre-compiled packages</li>
+                <li>Simplify deployment with docker-compose</li>
+            </ul>
+        </div>
+
+        <!-- Previous diagram sections remain the same -->
         <div class="diagram-section">
             <h2>System Flow Diagram</h2>
             <p class="description">
