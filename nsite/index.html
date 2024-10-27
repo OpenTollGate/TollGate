@@ -5,29 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TollGate System Flow</title>
     <style>
+        :root {
+            --nostr-purple: #7C3AED;
+            --bitcoin-orange: #F7931A;
+        }
+        
+        body {
+            color: #333;
+        }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+        
+        h1 {
+            color: var(--bitcoin-orange);
+            border-bottom: 2px solid var(--no str-purple);
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: var(--nostr-purple);
+        }
+        
         .diagram-section {
             margin: 20px 0;
             padding: 15px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--nostr-purple);
             border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(124, 58, 237, 0.1);
         }
+        
         .diagram-container {
             width: 100%;
-            max-width: 1 100px;
+            max-width: 1100px;
             margin: 0 auto;
             text-align: center;
         }
+        
         .diagram-container img {
             max-width: 100%;
             height: auto;
+            border: 2px solid var(--bitcoin-orange);
+            border-radius: 5px;
         }
+        
         .description {
             margin: 10px 0;
+        }
+        
+        footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid var(--nostr-purple);
+        }
+        
+        footer a {
+            color: var(--bitcoin-orange);
+            text -decoration: none;
+        }
+        
+        footer a:hover {
+            color: var(--nostr-purple);
+            text-decoration: underline;
+        }
+        
+        ol li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+        
+        ol li::marker {
+            color: var(--bitcoin-orange);
+            font-weight: bold;
         }
     </style>
 </head>
