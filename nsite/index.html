@@ -18,11 +18,16 @@
         }
         .diagram-container {
             width: 100%;
-            height: 600px;
-            border: none;
+            max-width: 1 100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .diagram-container img {
+            max-width: 100%;
+            height: auto;
         }
         .description {
-            margin:  10px 0;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -38,12 +43,9 @@
                 when a new client attempts to connect.
             </p>
             
-            <iframe 
-                class="diagram-container"
-                src="https://sequencediagram.org/index.html#initialData=C4S2BsFMAIGEEMC2AHAlhAZgewHYHM4BzFA WwCgBLAQxwCh9CSEYI8BBHRgI0JOFpRYCeHPmKkKVGgG4AsAAYBAVgCGAGxJ5xAMyLL12yBJWRSvOAEEATvJDbdARnJJ7AJn2HjVQgHMpAJYANACUjGBQ4CDRcIioGFi4BEQkFCTkVLS ZOXkYQiLikh48fIIiYoqkKmqaOvqGJuaW1rZ2Dk4uhG4e3r4BQdnBuWERuZF5+YXFpeWV1bXqDY3NrXkdXUU9ff2Dw6Pj9FNpc7PzVYury2vrG3qFiVu7B0f Hp8wZg6P8+IvLq5vbu4fH55fXxgKJ7vL4-BRtCZebTg4aQvLjeGI5FozHY3H4wnE0nQcm1anUvCNFqtdqdHp9AZDEZjSb4qYLKkrJlrdaAuDwpYElaIwm7BF7faHY5Yjm8s6XG 53B5PF5vD5fH5-QG0YGFEFgyHQxHIlForH0rGE4mk8mU6lqekM2DMGjkFSWUxgKyQGwABgATABWACsAGZlUsAKwADk1VWlAA4AJzKtVqgDsAA4ADQAXklw0zg05TXlNQBBWXK tXqgAc6vVAHYJw7nWqHYbfSrgxqAKJTl3u+VqgAqEsrfoAKnPBf6eoP1UPfZ3B6qR+qAGrhqWJgBicfXAHU4+uAApz7EAWTjScAVXn6vVgFuWQBFRcAG4XyYAShHhwAlYcq9UANTj1YAiu HlYALONOy8FQBrnUbYKH6JaSVNeDdcDgYVIbVOoAAAA" 
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
+            <div class="diagram-container">
+                <img src="images/new_client_check.png" alt="TollGate System Flow Diagram">
+            </div>
         </div>
 
         <div class="diagram-section">
@@ -58,7 +60,7 @@
         </div>
 
         <footer>
-            <p>For more information and documentation, visit the  <a href="https://github.com/OpenTollGate/TollGateNostrToolKit/tree/main">TollGate project repository</a></p>
+            <p>For more information and documentation, visit the <a href="https://github.com/OpenTollGate/TollGateNostrToolKit/tree/main">TollGate project repository</a></p>
         </footer>
     </div>
 </body>

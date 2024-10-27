@@ -102,4 +102,4 @@ For help with any command, use the `-h` or `--help` option.
 
 ## Contributing
 
-We welcome contributions to this documentation! If you've tried an approach that isn't documented here, please feel free to add it.
+We welcome contributions to this documentation! If you've tried an approach that isn't documented here, please feel free to add it. I use `sequencediagram.org` to create the sequence diagrams.
