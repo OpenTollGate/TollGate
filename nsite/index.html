@@ -55,29 +55,10 @@
         
         .doc-card h2 {
             color: var(--nostr-purple);
-            margin-top: 0;
-        }
-        
-        .doc-card p {
-            margin-bottom: 15px;
-        }
-        
-        .doc-card a {
-            color: var(--bitcoin-orange);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .doc-card a:hover {
-            color: var(--nostr-purple);
-            text-decoration: underline;
-        }
-        
-        footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 2px solid var(--nostr-purple);
             text-align: center;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bitcoin-orange);
         }
     </style>
 </head>
@@ -89,6 +70,8 @@
             <p>TollGate is a collection of Bitcoin-powered WiFi captive portals and network demarcation systems.</p>
         </div>
 
+        <!-- Technical Section -->
+        <h2 class="section-header">Technical Documentation</h2>
         <div class="docs-grid">
             <div class="doc-card">
                 <h2>Using OpenNDS</h2>
@@ -103,15 +86,21 @@
             </div>
 
             <div class="doc-card">
+                <h2>Building Custom Feeds</h2>
+                <p>Guide for building custom OpenWRT feeds for TollGate implementation.</p>
+                <a href="building_custom_feeds_openwrt.html">Read More →</a>
+            </div>
+
+            <div class="doc-card">
                 <h2>Using Raspberry Pi</h2>
                 <p>Instructions for setting up TollGate on a Raspberry Pi device.</p>
                 <a href="using_raspberry_pi.html">Read More →</a>
             </div>
 
             <div class="doc-card">
-                <h2>Building Custom Feeds</h2>
-                <p>Guide for building custom OpenWRT feeds for TollGate implementation.</p>
-                <a href="building_custom_feeds_openwrt.html">Read More →</a>
+                <h2>Using Toll Booth</h2>
+                <p>Learn how to set up and manage the Toll Booth component for payment processing and access control.</p>
+                <a href="using_toll_booth.html">Read More →</a>
             </div>
 
             <div class="doc-card">
@@ -119,11 +108,21 @@
                 <p>Guide for implementing and configuring RADIUS server authentication with TollGate.</p>
                 <a href="using_radius_server.html">Read More →</a>
             </div>
+        </div>
+
+	<!-- Non-Technical Section -->
+        <h2 class="section-header">Project  Overview</h2>
+        <div class="docs-grid">
+            <div class="doc-card">
+                <h2>Project Timeline</h2>
+                <p>Explore the evolution and major milestones of the TollGate project from inception to present.</p>
+                <a href="project_timeline.html">Read More →</a>
+            </div>
 
             <div class="doc-card">
-                <h2>Using Toll Booth</h2>
-                <p>Learn how to set up and manage the Toll Booth component for payment processing and access control.</p>
-                <a href="using_toll_booth.html">Read More →</a>
+                <h2>Future Outlook</h2>
+                <p>Discover the roadmap and future possibilities for TollGate development and implementation.</p>
+                <a href="outlook.html">Read More →</a>
             </div>
         </div>
 

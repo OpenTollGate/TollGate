@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TollGate Documentation</title>
+    <style>
+        :root {
+            --nostr-purple: #7C3AED;
+            --bitcoin-orange: #F7931A;
+        }
+        
+        body {
+            color: #333;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: var(--bitcoin-orange);
+            border-bottom: 2px solid var(--nostr-purple);
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .doc-card {
+            border: 1px solid var(--nostr-purple);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(124, 58, 237, 0.2);
+        }
+        
+        .doc-card h2 {
+            color: var(--nostr-purple);
+            margin-top: 0;
+        }
+        
+        .doc-card p {
+            margin-bottom: 15px;
+        }
+        
+        .doc-card a {
+            color: var(--bitcoin-orange);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .doc-card a:hover {
+            color: var(--nostr-purple);
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid var(--nostr-purple);
+            text-align: center;
+        }
+    
+    .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background: var(--nostr-purple);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        border-radius: 3px;
+    }
+
+    .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    .timeline-item:: after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -10px;
+        top: 15px;
+        background: var(--bitcoin-orange);
+        border: 4px solid var(--nostr-purple);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .timeline-item:nth-child(odd) {
+        left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 50%;
+    }
+
+    .timeline-item:nth-child(even)::after {
+        left: -10px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid var(--nostr-purple);
+        box-shadow: 0 2px 5px rgba(124, 58, 237, 0.2);
+    }
+
+    .timeline-content h3 {
+        color: var(--bitcoin-orange);
+        margin-top: 0;
+    }
+
+    .timeline-content p {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 600px) {
+        .timeline:: after {
+            left: 31px;
+        }
+        
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 0;
+        }
+        
+        .timeline-item::after {
+            left: 21px;
+        }
+    }
+</style>
+
+<!-- Add this HTML after your intro div and before the docs-grid -->
+<div class="timeline">
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <h3>Initial Attempt</h3>
+            <p>OpenWRT in Docker container on Raspberry Pi. Faced kernel issues.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <h3>Direct Hardware Approach</h3>
+            <p>OpenWRT on Raspberry Pi. Faced kernel issues.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <h3>First Success</h3>
+            <p>NoDogSplash on GLAR300 m with modified username field → Initial demo.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <h3>Nostr Integration</h3>
+            <p>libsecp256k1 and libwally in OpenWRT → Nostr support added.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <h3>OpenNDS Integration</h3>
+            <p>OpenNDS on any OpenWRT router with local FAServer.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <h3>TollBooth Launch</h3>
+            <p>Introduction of TollBooth component.</p>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <h3>Future Possibilities</h3>
+            <p>Return to armhf/x86, TollBooth improvements, Android support, remote FAServer, RADIUS server integration.</p>
+        </div>
+
+        <footer>
+            <p>For more information, visit the <a href="https://github.com/orgs/OpenTollGate/repositories">TollGate project repositories</a></p>
+        </footer>
+    </div>
+</div>
