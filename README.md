@@ -2,6 +2,8 @@
 
 This repository serves as documentation for approaches that have already been tried when building TollGate. It helps new contributors understand TollGate's current state and learn from previously encountered challenges.
 
+You can view the Documentation here: https://npub1suw0zfxerywd4zku4gjsjde22zhzye9dl2hsll6s3z2qap75p78s66lkhp.nsite.lol/
+
 ## Hosting this nsite
 
 ### Creating your own credentials
