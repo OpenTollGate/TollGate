@@ -3,140 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TollGate Binary Downloads</title>
+    <title>TollGate System Flow</title>
     <style>
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        .download-section {
+        .diagram-section {
             margin: 20px 0;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        .hash {
-            font-family: monospace;
-            color: #666;
+        .diagram-container {
+            width: 100%;
+            height: 600px;
+            border: none;
         }
         .description {
-            margin: 10px 0;
-        }
-        pre {
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 4px;
-            overflow-x: auto;
-        }
-        code {
-            background-color: #f5f5f5;
-            padding: 2px 4px;
-            border-radius: 3px;
+            margin:  10px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>TollGate Binary Downloads</h1>
+        <h1>TollGate System Flow</h1>
         <p>OpenWRT plugin for Bitcoin-powered WiFi captive portal</p>
 
-        <div class="download-section">
-            <h2>About TollGate</h2>
+        <div class="diagram-section">
+            <h2>System Flow Diagram</h2>
             <p class="description">
-                TollGate enables OpenWRT routers to accept Bitcoin payments for internet access through a captive portal interface.
+                This sequence diagram illustrates the interaction flow between different components of the TollGate system
+                when a new client attempts to connect.
             </p>
+            
+            <iframe 
+                class="diagram-container"
+                src="https://sequencediagram.org/index.html#initialData=C4S2BsFMAIGEEMC2AHAlhAZgewHYHM4BzFA WwCgBLAQxwCh9CSEYI8BBHRgI0JOFpRYCeHPmKkKVGgG4AsAAYBAVgCGAGxJ5xAMyLL12yBJWRSvOAEEATvJDbdARnJJ7AJn2HjVQgHMpAJYANACUjGBQ4CDRcIioGFi4BEQkFCTkVLS ZOXkYQiLikh48fIIiYoqkKmqaOvqGJuaW1rZ2Dk4uhG4e3r4BQdnBuWERuZF5+YXFpeWV1bXqDY3NrXkdXUU9ff2Dw6Pj9FNpc7PzVYury2vrG3qFiVu7B0f Hp8wZg6P8+IvLq5vbu4fH55fXxgKJ7vL4-BRtCZebTg4aQvLjeGI5FozHY3H4wnE0nQcm1anUvCNFqtdqdHp9AZDEZjSb4qYLKkrJlrdaAuDwpYElaIwm7BF7faHY5Yjm8s6XG 53B5PF5vD5fH5-QG0YGFEFgyHQxHIlForH0rGE4mk8mU6lqekM2DMGjkFSWUxgKyQGwABgATABWACsAGZlUsAKwADk1VWlAA4AJzKtVqgDsAA4ADQAXklw0zg05TXlNQBBWXK tXqgAc6vVAHYJw7nWqHYbfSrgxqAKJTl3u+VqgAqEsrfoAKnPBf6eoP1UPfZ3B6qR+qAGrhqWJgBicfXAHU4+uAApz7EAWTjScAVXn6vVgFuWQBFRcAG4XyYAShHhwAlYcq9UANTj1YAiu HlYALONOy8FQBrnUbYKH6JaSVNeDdcDgYVIbVOoAAAA" 
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
         </div>
 
-        <div class="download-section">
-            <h2>Build From Source</h2>
-            <p>Clone the repository:</p>
-            <pre>git clone https://github.com/OpenTollGate/TollGateNostrToolKit.git
-cd TollGateNostrToolKit/</pre>
-            
-            <p>Run the build coordinator (requires sudo privileges):</p>
-            <pre>./build_coordinator.sh</pre>
-            
-            <p>Note: Initial build may take over an hour. Subsequent builds are faster if only modifying files.</p>
-        </div>
-
-        <div class="download-section">
-            <h2>Flashing Instructions</h2>
+        <div class="diagram-section">
+            <h2>Flow Description</h2>
             <ol>
-                <li>Connect your OpenWRT router to your computer</li>
-                <li>Find your router's IP address using <code>ifconfig</code></li>
-                <li>Copy the sysupgrade file to your router:
-                    <pre>scp openwrt-ath79-nand-glinet_gl-ar300m-nor-squashfs-sysupgrade_[commit_hash].bin root@[router_ip]:/tmp/.</pre>
-                </li>
-                <li>SSH into your router and navigate to /tmp</li>
-                <li>Flash the router:
-                    <pre>sysupgrade -n openwrt-ath79-nand-glinet_gl-ar300m-nor-squashfs-sysupgrade_[commit_hash].bin</pre>
-                </li>
-                <li>Wait for the router to reboot (few minutes)</li>
-                <li>Find the new IP address using <code>ifconfig</code></li>
-                <li>SSH into the router and follow the prompts to set your password and LNURL</li>
+                <li>New WiFi client connects and attempts to access the internet</li>
+                <li>Router intercepts request and forwards to OpenNDS captive portal</li>
+                <li>OpenNDS verifies client MAC address with FAIServer</li>
+                <li>FAIServer processes e-cash token through Minibits mint</li>
+                <li>Upon successful verification, client is granted internet access</li>
             </ol>
         </div>
 
-        <div class="download-section">
-            <h2>Requirements</h2>
-            <ul>
-                <li>OpenWRT compatible router (tested on GL.iNet GL-AR300M)</li>
-                <li>Linux build environment with sudo privileges</li>
-                <li>Internet connection for downloading dependencies</li>
-            </ul>
-        </div>
-
-        <div class="download-section">
-            <h2>Available Releases</h2>
-            <ul id="releases-list">
-                <!-- Releases will be dynamically inserted here by JavaScript -->
-            </ul>
-        </div>
-
         <footer>
-            <p>For more information and documentation, visit the <a href="https://github.com/OpenTollGate/TollGateNostrToolKit/tree/main">TollGate project repository</a></p>
-            <p>Verify file integrity by checking against our <a href="checksums.json">checksums file</a></p>
+            <p>For more information and documentation, visit the  <a href="https://github.com/OpenTollGate/TollGateNostrToolKit/tree/main">TollGate project repository</a></p>
         </footer>
     </div>
-
-    <script>
-        async function loadReleases() {
-            try {
-                const response = await fetch('checksums.json');
-                const checksums = await response.json();
-                const releasesList = document.getElementById('releases-list');
-                
-                // Filter for binary files
-                const binaries = Object.keys(checksums)
-                    .filter(key => key.endsWith('.bin_checksum'))
-                    .map(key => ({
-                        filename: key.replace('_checksum', ''),
-                        checksum: checksums[key],
-                        size: checksums[key.replace('_checksum', '_size')]
-                    }));
-
-                // Create HTML for each binary
-                binaries.forEach(binary => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `
-                        <a href="${binary.filename}">${binary.filename}</a>
-                        <br>
-                        <span class="hash">SHA256: ${binary.checksum}</span>
-                        <br>
-                        <span class="hash">Size: ${binary.size} bytes</span>
-                    `;
-                    releasesList.appendChild(li);
-                });
-            } catch (error) {
-                console.error('Error loading releases:', error);
-                const releasesList = document.getElementById('releases-list');
-                releasesList.innerHTML = '<li>Error loading releases. Please try again later.</li>';
-            }
-        }
-
-        // Load releases when the page loads
-        window.addEventListener('DOMContentLoaded', loadReleases);
-    </script>
 </body>
 </html>
