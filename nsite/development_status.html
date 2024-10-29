@@ -119,13 +119,15 @@
 
         <!-- Current Development Section -->
         <div class="status-card">
-            <h2>Current Development</h2>
+            <h2>Current Development / todo</h2>
             <ul class="feature-list">
                 <li>Rust implementation of TollGate on armhf (& possibly x86)</li>
                 <li>Switch to docker registry for building</li>
                 <li>Switching to FAS server in OpenNDS</li>
                 <li>Test TollBooth & prepare for deployment</li>
                 <li>Wrap up the docker parallel building branch</li>
+                <li>Get ngit events to trigger build</li>
+                <li>Describe the grand vision - KYC free mesh internets</li>
             </ul>
         </div>
 
@@ -133,9 +135,11 @@
         <div class="status-card">
             <h2>Open Questions</h2>
             <ul class="feature-list">
+                <li>Where do we want TollGate to be in 2 years?</li>
+                <li>Use VLAN for MAC address isolation? Other solution to prevent MAC address snooping?</li>
+                <li>Whats the right tooling for using a raspberry pi as a router? Raspap, vyos, pifi, something else? Checkout pi-hole..</li>
                 <li>Seems like new npubs still need some kind of permission to push - check with hzrd</li>
                 <li>Should we create separate repos for OpenNDS and TollBooth or should the separation be made in the docker registry</li>
-                <li>What's the right way to use ngit in the build environment?</li>
             </ul>
         </div>
 
