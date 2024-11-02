@@ -80,6 +80,25 @@
             color: var(--bitcoin-orange);
         }
 
+        .documentation-link {
+            background: linear-gradient(45deg, var(--bitcoin-orange), var(--nostr-purple));
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .documentation-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .documentation-link a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             margin-top: 50px;
             padding-top: 20px;
@@ -106,6 +125,13 @@
         <div class="section-card">
             <h2>Overview</h2>
             <p>RADIUS server integration offers potential improvements for TollGate authentication and payment processing.</p>
+        </div>
+
+        <!-- Documentation Link -->
+        <div class="documentation-link">
+            <h2>Detailed Payment Implementation</h2>
+            <p>Learn how to implement RADIUS server with Lightning Network and Cashu payments in our detailed guide.</p>
+            <p><a href="payments_in_radius_server.html">View Payment Implementation Documentation →</a></p>
         </div>
 
         <!-- Benefits Section -->
@@ -149,7 +175,7 @@
         </div>
 
         <footer>
-            <p>For more information, visit the <a href="https://github.com/orgs/OpenTollGate/repositories">TollGate project repositories</ a></p>
+            <p>For more information, visit the <a href="https://github.com/orgs/OpenTollGate/repositories">TollGate project repositories</a></p>
         </footer>
     </div>
 </body>
