@@ -4,6 +4,22 @@ This repository serves as documentation for approaches that have already been tr
 
 You can view the Documentation here: https://npub1suw0zfxerywd4zku4gjsjde22zhzye9dl2hsll6s3z2qap75p78s66lkhp.nsite.orangesync.tech
 
+## Repositories
+### Modules
+- [Valve (go)](https://github.com/OpenTollGate/tollgate-module-valve-go), Opens/closes gate for customer
+- [Relay (go)](https://github.com/OpenTollGate/tollgate-module-relay-go), Nostr relay
+- [Crowsnest (go)](https://github.com/OpenTollGate/tollgate-module-crowsnest-go), Searches for upstream Tollgates
+- Merchant (go), Handles finances, create sessions ##TODO
+- Herald (go), Creates announcements + Beacon Frames ##TODO
+
+### User interface
+- Crowsnest (Tauri), Native user-interface  ##TODO
+  - MacOS 
+  - Windows
+  - Linux
+  - Android
+  - IOS
+
 ## Roadmap
 - [ ] Switch to GoLang
 	- [x] Get golang binary running on GL-AR300M
