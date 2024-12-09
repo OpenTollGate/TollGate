@@ -4,6 +4,42 @@ This repository serves as documentation for approaches that have already been tr
 
 You can view the Documentation here: https://npub1suw0zfxerywd4zku4gjsjde22zhzye9dl2hsll6s3z2qap75p78s66lkhp.nsite.orangesync.tech
 
+## Roadmap
+- [ ] Switch to GoLang
+	- [x] Get golang binary running on GL-AR300M
+	- [x] Get go-nostr library running on GL-AR300M
+	- [ ] Create OPKG package
+- [ ] Whitelist relay for unauthenticated users
+	- [x] Public relay
+	- [ ] Relay within network
+	- [x] Relay on-device (router)
+- [ ] Router support:
+	- [x] Low-tier: GL-AR300M
+	- [ ] Mid-tier: GL-MT3000
+	- [ ] High-tier GL-MT6000
+- [ ] POC
+	- [ ] Machine-to-machine purchasing
+		- [x] Build Valve component (open/close gate)
+		- [ ] Build Herald component (announcements)
+			- [ ] Add pubkey to Beacon frames
+		- [ ] Build Crowsnest component (scanning)
+		- [ ] Build Merchant component (decision-making)
+	- [ ] Human-to-machine purchasing
+		- [ ] Captive portal
+			- [ ] Serve JS-Compatible portal
+			- [ ] Portal can display/access MAC address
+			- [ ] Portal can display/access router IP
+- [ ] MVP
+	- [ ] Strict authorization between components
+	- [ ] Encrypt internal Nostr messages
+- [ ] Product V1
+	- [ ] Automatic updates (+ verify binaries)
+	- [ ] Dashboard to mange Tollgates
+	- [ ] ...
+- [ ] Product V2
+	- [ ] Android app to auto-purchase from tollgate
+	- [ ] ...
+
 ## Hosting this nsite
 
 ### Creating your own credentials
@@ -25,7 +61,7 @@ The setup wizard will guide you through the following steps:
 ```bash
 nsite:config Project file not found at .nsite/project.json +0ms
 nsite-cli: No existing project configuration found. Setting up a new one:
-✔ 1. Existing NOSTR private key (nsec/hex) (Enter to create a NEW one): 
+✔ 1. Existing NOSTR private key (nsec/hex) (Enter to create a NEW one):
 ✔ 2. Web site or project name: ...
 ✔ 3. Web site or project description: ...
 ? 5. Blossom server URLs: https://nostr.download
